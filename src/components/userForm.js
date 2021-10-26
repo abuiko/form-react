@@ -28,6 +28,19 @@ export class userForm extends Component {
         })
     }
 
+    // Handle fields change
+    handleChange = (event) => {
+        const { name, value, type, checked } = event.target
+        this.setState({
+            [name]: value
+        })
+    }
+
+    // { handleChange = input => e => {
+    //     this.setState({ [input]: value })
+    // }
+
+
     render() {
         return (
             <div>
