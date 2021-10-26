@@ -11,6 +11,23 @@ export class userForm extends Component {
         city: "",
         bio: ""
     }
+
+    // Proceed to the nex step
+    nextStep = () => {
+        const { step } = this.state
+        this.setState({
+            step: step + 1
+        })
+    }
+
+    // Go back to previous step
+    prevStep = () => {
+        const { step } = this.state
+        this.setState({
+            step: step - 1
+        })
+    }
+
     render() {
         return (
             <div>
