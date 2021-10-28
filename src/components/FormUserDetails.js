@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import { Navbar, Container, Nav } from 'react-bootstrap'
 import { Form, FloatingLabel, Button } from 'react-bootstrap'
-import styled from "styled-components";
+import styled from "styled-components"
+import Navigation from "./Navigation"
 
 const Styles = styled.div`
     form {
@@ -25,7 +25,8 @@ export class FormUserDetails extends Component {
 
     continue = e => {
         e.preventDefault()
-        this.props.nextStop()
+        this.props.nextStep()
+
     }
 
     render() {
@@ -33,17 +34,8 @@ export class FormUserDetails extends Component {
 
         return (
             <Styles>
+                <Navigation />
                 <div>
-                    <Navbar bg="dark" variant="dark">
-                        <Container>
-                            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                            <Nav className="me-auto">
-                                <Nav.Link href="#home">Home</Nav.Link>
-                                <Nav.Link href="#features">Features</Nav.Link>
-                                <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            </Nav>
-                        </Container>
-                    </Navbar>
                     <Form>
                         <Form.Group className="mb-3 form-group" controlId="formBasicEmail">
                             <FloatingLabel
@@ -88,9 +80,6 @@ export class FormUserDetails extends Component {
                     </Form>
                 </div>
             </Styles>
-
-
-
         )
     }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { FormUserDetails } from "./FormUserDetails"
 
 
+
 export class UserForm extends Component {
 
     state = {
@@ -46,6 +47,7 @@ export class UserForm extends Component {
             case 1:
                 return (
                     <div>
+
                         <FormUserDetails
                             nextStep={this.nextStep}
                             handleChange={this.handleChange}
