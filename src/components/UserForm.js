@@ -31,16 +31,10 @@ export class UserForm extends Component {
     }
 
     // Handle fields change
-    handleChange = (event) => {
-        const { name, value } = event.target
-        this.setState({
-            [name]: value
-        })
-    }
 
-    // { handleChange = input => e => {
-    //     this.setState({ [input]: value })
-    // }
+    handleChange = input => e => {
+        this.setState({ [input]: e.target.value })
+    }
 
 
     render() {
