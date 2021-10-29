@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FormUserDetails } from "./FormUserDetails"
 import { FormPersonalDetails } from './FormPersonalDetails'
+import { Confirm } from './Confirm'
 
 
 class UserForm extends Component {
@@ -69,7 +70,14 @@ class UserForm extends Component {
                 )
             case 3:
                 return (
-                    <h1>Confirm</h1>
+                    <div>
+
+                        <Confirm
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            values={values}
+                        />
+                    </div>
                 )
 
             case 4:
