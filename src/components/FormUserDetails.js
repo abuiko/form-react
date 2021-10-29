@@ -39,7 +39,7 @@ export class FormUserDetails extends Component {
                     <Form>
                         <Form.Group className="mb-3 form-group" controlId="formBasicEmail">
                             <FloatingLabel
-                                controlId="floatingINput"
+                                controlId="floatingInput"
                                 label="First Name"
                                 className="mb-3">
                                 <Form.Control
